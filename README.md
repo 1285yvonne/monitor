@@ -7,3 +7,7 @@
 - 数据处理与报警模块
 - 数据获取模块
 
+具体的模块设计请看文件：
+monitor.xmind
+monitor.png
+
