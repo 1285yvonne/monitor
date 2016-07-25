@@ -16,7 +16,7 @@
                   useUTC:false
               }
           });
-          $.getJSON('/data', function (data) {
+          $.getJSON('/data/mem', function (data) {
               $('#container').highcharts({
                   chart:{
                       events:{
@@ -24,7 +24,7 @@
 
                               var series = this.series[0]
                               setInterval(function(){
-                                  $.getJSON('/data',function(res){
+                                  $.getJSON('/data/mem',function(res){
                                       $.each(res,function(i,v){
                                           series.addPoint(v)
                                       })
@@ -46,7 +46,7 @@
                   },
                   yAxis: {
                       title: {
-                          text: 'localhost memory'
+                          text: 'memory percent(%)'
                       }
                   },
                   legend: {
@@ -81,7 +81,7 @@
 
                   series: [{
                       type: 'area',
-                      name: 'USD to EUR',
+                      name: 'memory percent',
                       data: data
                   }]
               });
